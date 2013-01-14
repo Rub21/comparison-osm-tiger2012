@@ -1,0 +1,91 @@
+{
+  "bounds": [
+    -83.7158,
+    36.5096,
+    -75.2124,
+    39.4701
+  ],
+  "center": [
+    -78.7967,
+    37.6512,
+    7
+  ],
+  "format": "png8",
+  "interactivity": {
+    "layer": "",
+    "template_teaser": "\n",
+    "fields": []
+  },
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        -83.673338,
+        36.540816,
+        -75.245877,
+        39.465979
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT gid,  geom  FROM roads_t2012) as tiger",
+        "key_field": "gid",
+        "geometry_field": "geom",
+        "extent_cache": "custom",
+        "extent": "-83.673338 36.540816,-75.245877 39.465979",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "1234",
+        "dbname": "osm_virginia"
+      },
+      "id": "tiger_roads",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "tiger_roads"
+    },
+    {
+      "extent": [
+        -83.673338,
+        36.540816,
+        -75.245877,
+        39.465979
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT id,  osm_version, way  FROM osm_roads) as osm_road",
+        "key_field": "id",
+        "geometry_field": "way",
+        "extent_cache": "custom",
+        "extent": "-83.673338 36.540816,-75.245877 39.465979",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "1234",
+        "dbname": "osm_virginia",
+        "id": "osm_road",
+        "project": "comparision",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "osm_road",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "osm_road"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "comparision",
+  "description": "",
+  "legend": "<span style='color:#00ffff'>▉</span> OSM-Roads <br />\n<span style='color:#ff00ff'>▉</span> TIGER 2012-Roads",
+  "attribution": ""
+}
