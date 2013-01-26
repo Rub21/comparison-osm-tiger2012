@@ -42,7 +42,10 @@
         "port": "5432",
         "user": "postgres",
         "password": "1234",
-        "dbname": "osm_virginia"
+        "dbname": "osm_virginia",
+        "id": "tiger_roads",
+        "project": "comparision",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
       },
       "id": "tiger_roads",
       "class": "",
@@ -60,7 +63,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT id,  osm_version, way  FROM osm_roads) as osm_road",
+        "table": "(select id,osm_uid,osm_version,substring(osm_timestamp from 1 for 4) as osm_timestamp,way from osm_roads) as dbosm",
         "key_field": "id",
         "geometry_field": "way",
         "extent_cache": "custom",
@@ -70,16 +73,17 @@
         "user": "postgres",
         "password": "1234",
         "dbname": "osm_virginia",
-        "id": "osm_road",
+        "id": "osm_road2",
         "project": "comparision",
         "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
       },
-      "id": "osm_road",
+      "id": "osm_road2",
       "class": "",
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
-      "name": "osm_road"
+      "name": "osm_road2",
+      "geometry": "linestring"
     }
   ],
   "scale": 1,

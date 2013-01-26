@@ -1,10 +1,73 @@
 @cian : #00ffff;
 @Magenta :#ff00ff;
 @gris:#D0D0D0;
-#osm_road{ 
-  line-comp-op:src-out;
-   line-color:@cian;
+@rojo:#D8032B;
+@amarillo:#E7E34F;
+#osm{ 
+    line-color:@cian;
+  	[zoom=3]{
+     line-width:0.1;
+  	}
+  	[zoom=4]{
+     line-width:0.1;
+  	}
+  	[zoom=5]{
+     line-width:0.2;
+  	}
+  	[zoom=6]{
+     line-width:0.3;
+  	}
+  	[zoom=7]{
+     line-width:0.4;
+  	}
+  	[zoom=8]{
+     line-width:0.5;
+  	}
+  	[zoom=9]{
+     line-width:0.6;
+  	}
+	[zoom=10]{
+     line-width:0.7;
+  	}
+  	[zoom=11]{
+     line-width:0.8;
+  	}
+  	[zoom=12]{
+     line-width:0.9;
+  	}
 }
-#tiger_roads{
-    line-color: @Magenta;
-}
+#tiger{ 
+
+    line-color:@Magenta;
+    	[zoom=3]{
+     line-width:0.1;
+  	}
+  	[zoom=4]{
+     line-width:0.2;
+  	}
+  	[zoom=5]{
+     line-width:0.3;
+  	}
+  	[zoom=6]{
+     line-width:0.4;
+  	}
+  	[zoom=7]{
+     line-width:0.5;
+  	}
+  	[zoom=8]{
+     line-width:0.6;
+  	}
+  	[zoom=9]{
+     line-width:0.7;
+  	}
+	[zoom=10]{
+     line-width:0.8;
+  	}
+  	[zoom=11]{
+     line-width:0.9;
+  	}
+  	[zoom=12]{
+     line-width:1;
+  	}
+
+  }
