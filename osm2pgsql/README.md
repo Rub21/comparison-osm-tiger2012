@@ -16,6 +16,6 @@ export osm file to Postgis Data Base
 
 ### after the recommendation
 
-* osm2pgsql -v  -x -s -E 4326 -S default.style -d db_virginia  virginia.osm.pbf
+* osm2pgsql -v  -x  -S default.style -d db_virginia  virginia.osm.pbf
  
  
